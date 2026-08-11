@@ -21,8 +21,7 @@ rl.close();
 /// ------------------ ENTREGA MARTES --------------
 let resultado: string[] = []
 
-const answer = await rl.question("¿Cuál es tu nombre? ");
-console.log(`Hola, ${answer}!`);
+
 
 
 let opciones: number = 0;
@@ -33,7 +32,7 @@ while (opciones = 0){
     - Eliminar ultima tarea: 2
     - Lista tareas: 3
     - Salir: 4`)
-    const answer: number = await rl.question();
+    const answer = await rl.question();
 }
 
 switch(answer){
