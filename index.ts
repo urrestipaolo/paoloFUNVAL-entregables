@@ -17,9 +17,9 @@ console.log(systemName + "v" + version + " BIENVENIDO " + userName +
 rl.close();
 
 
-/*Las dos primeras lineas de arriba me salen con errores en rojo
- e intendado buscar varias soluciones en internet para corregir el error
- pero me dice al final que es porque mi version de node.js es diferente
- o creo que no es compatible. Pero ese es el unico error, lo resto aparece
- bien en la terminal
-*/
+let control_de_flujos: string[];
+
+const answer = await rl.question("¿Cuál es tu nombre? ");
+console.log(`Hola, ${answer}!`);
+
+export {};
