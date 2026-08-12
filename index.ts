@@ -20,10 +20,6 @@ rl.close();
 
 /// ------------------ ENTREGA MARTES --------------
 let resultado: string[] = []
-
-
-
-
 let opciones: number = 0;
 
 while (opciones = 0){
@@ -32,10 +28,9 @@ while (opciones = 0){
     - Eliminar ultima tarea: 2
     - Lista tareas: 3
     - Salir: 4`)
-    const answer = await rl.question();
-}
+    let answer = await rl.question();
 
-switch(answer){
+    switch(answer){
     case 1:
     const answer1 = await rl.question("¿Que desea agregar? ")
     console.log(resultado.push(answer1));
@@ -57,9 +52,9 @@ switch(answer){
     case 4:
     console.log("HASTA LUEGO");
     break;
-
+}
 }
 
-
+/// -------- ENTREGABLE MIERCOLES ------------
 
 
