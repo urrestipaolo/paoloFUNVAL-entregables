@@ -8,15 +8,15 @@ import { stdin as input, stdout as output } from 'process';
 
 // ✍️ Escribe tu código aquí 👇
 
-let systemName: string = "SISTEMA ESTADISTICAS DE FUTBOL SUDAMERICANO ";
+ let systemName: string = "SISTEMA ESTADISTICAS DE FUTBOL SUDAMERICANO ";
 let version: number = 2.1;
 let userName: string = "KEVIN"
 
 console.log(systemName + "v" + version + " BIENVENIDO " + userName + 
             " ¿Listo para poder conocer mejor las estadisticas del futbol? ");
 
-// 🚫 No eliminar las líneas de abajo ⬇️
-rl.close();
+const answer = await rl.question("¿Cuál es tu nombre? ");
+
 
 /// ------------------ ENTREGA MARTES --------------
 let resultado: string[] = []
@@ -28,7 +28,7 @@ while (opciones = 0){
     - Eliminar ultima tarea: 2
     - Lista tareas: 3
     - Salir: 4`)
-    let answer = await rl.question();
+    const answer = await rl.question();
 
     switch(answer){
     case 1:
@@ -57,4 +57,34 @@ while (opciones = 0){
 
 /// -------- ENTREGABLE MIERCOLES ------------
 
+let contador = 1;
 
+ interface interfaz {
+    id: number;
+    title: string;
+    completed: boolean;
+}
+
+// Arrows function
+
+const addTask = (answer1: string) => {
+    let respuesta1 = answer1;
+    return respuesta1;
+}
+
+const listTasks = (answer3: string) => {
+    let respuesta2 = answer3;
+    return respuesta2;
+}
+
+const removeTask = (answer2: string) => {
+    let respuesta3 = answer2;
+    return respuesta3;
+ }
+
+
+ //No entendí sobre convertir los strings a task.
+
+// 🚫 No eliminar las líneas de abajo ⬇️
+rl.close();
+ 
