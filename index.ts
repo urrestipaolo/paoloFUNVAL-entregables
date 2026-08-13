@@ -59,11 +59,33 @@ while (opciones = 0){
 
 let contador = 1;
 
+
  interface interfaz {
     id: number;
     title: string;
     completed: boolean;
 }
+
+let contenido: interfaz[] =[ {
+    id: 1,
+    title: "modelo1",
+    completed: true,
+},
+
+{
+    id: 2,
+    title: "modelo2",
+    completed: false,
+},
+
+{
+    id: 3,
+    title: "modelo3",
+    completed: false,
+}
+
+]
+
 
 // Arrows function
 
@@ -81,9 +103,50 @@ const removeTask = (answer2: string) => {
     let respuesta3 = answer2;
     return respuesta3;
  }
-
-
  //No entendí sobre convertir los strings a task.
+
+
+
+ /// -------- ENTREGABLE JUEVES -----------
+ const markCompleted = (id: number): number => {
+    return contenido.find((i) => i.id === id)
+}
+
+const filterPending = (): interfaz[] => {
+    return contenido.filter((i) => !i.completed);
+}
+
+const filterCompleted = (): interfaz[] => {
+    return contenido.filter((i) => i.completed);
+}
+
+// .map
+const identificaciones: number[] = contenido.map(function(prod:interfaz): number {
+    return prod.id;
+});
+
+const titulos: string[] = contenido.map(function(prod:interfaz): string {
+    return prod.title;
+});
+
+const completed: boolean[] = contenido.map(function(prod:interfaz): boolean {
+    return prod.completed;
+});
+
+//.forEach
+contenido.forEach(function(prod:interfaz): void {
+    console.log("identificaciones:", prod.id)
+});
+
+contenido.forEach(function(prod:interfaz): void {
+    console.log("titulos:", prod.title)
+});
+
+contenido.forEach(function(prod:interfaz): void {
+    console.log("situaciones:", prod.completed)
+});
+
+
 
 // 🚫 No eliminar las líneas de abajo ⬇️
 rl.close();
